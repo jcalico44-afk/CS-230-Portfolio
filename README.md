@@ -1,2 +1,15 @@
-# CS-230-Portfolio
-Draw It or Lose It - Software Design Document
+CS-230: The Gaming Room Software Design Portfolio
+Client and Software Requirements Summary
+The Gaming Room is a game development company that wanted to expand their successful Android-only game, "Draw It or Lose It," to a broader audience across multiple platforms (iOS, PC, and Web). The core software requirement was to design a scalable, web-based, distributed backend architecture using Java. This design needed to centrally host the game logic and serve it to various clients simultaneously while adhering to strict memory and data integrity constraints.
+Documentation Strengths
+I was particularly effective at analyzing the client's design constraints and translating them into concrete architectural recommendations. By clearly outlining the need for a cloud-hosted Linux platform, a centralized Redis data store to handle the single-instance memory constraint, and WebSockets for low-latency communication, the documentation provides a highly actionable blueprint for the development team.
+Value of the Design Process
+Creating the UML Domain Model was incredibly helpful for visualizing the code structure. Mapping out the inheritance structure (where Game, Team, and Player inherit from a base Entity class) and defining the Singleton pattern for the GameService made it much easier to understand how the object-oriented Java code would need to be structured and managed before writing any actual backend logic.
+Areas for Revision
+If I could revise one part of the documentation, I would expand the initial evaluation of the operating systems to dive deeper into a cost-benefit analysis of specific cloud providers (such as AWS versus Google Cloud) earlier in the process. While identifying Linux as the target OS was correct, outlining the exact deployment environments sooner would provide the client with a clearer picture of immediate hosting costs.
+Interpreting User Needs
+I interpreted the user’s needs by focusing heavily on the end-player experience—specifically the requirement for synchronous 15-second and 30-second game timers and real-time drawing updates. This directly informed the decision to implement WebSockets rather than standard HTTP requests. Considering user needs is critical because a distributed game with network latency, server crashes, or conflicting game states will immediately ruin the user experience and prevent the application from succeeding.
+Design Approach and Future Strategies
+I approached this software design systematically by first establishing the strict constraints, mathematically and visually modeling the domain, and finally selecting the infrastructure required to support that model. Moving forward, I will continue to use UML diagramming and constraint-based platform evaluation as foundational strategies for analyzing and designing complex distributed software applications.
+AI Acknowledgement:
+Generative AI (Google Gemini) was utilized as a research and troubleshooting tool to help refine the technical concepts and terminology during the drafting of the final project recommendations.
